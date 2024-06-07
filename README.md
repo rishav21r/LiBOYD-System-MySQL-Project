@@ -55,3 +55,22 @@ CREATE TABLE `DEPARTMENT` (
   `MailboxNumber` INT,
   `PhoneNumber` VARCHAR(20)
 );
+```
+
+### Step 3: Inserting Mock Data
+
+To demonstrate the functionality of the system, mock data was inserted into the tables. This data serves as sample records to test and validate the database operations.
+
+Path: [Database Insertion Script](./SQL_Scripts/LiBoyd_insert_script.sql)
+
+#### Example Snippet:
+```sql
+INSERT INTO `EMPLOYEE` (`EmployeeID`, `FirstName`, `MiddleInitial`, `LastName`, `Title`, `CorporateEmail`, `CorporatePhone`, `PersonalPhone`, `DepartmentID`) VALUES
+(1, 'John', 'A', 'Doe', 'Mr.', 'john.doe@lifeinsuranceco.com', '555-1234', '555-5678', 1),
+(2, 'Jane', 'B', 'Smith', 'Ms.', 'jane.smith@lifeinsuranceco.com', '555-8765', '555-4321', 2);
+
+INSERT INTO `DEPARTMENT` (`DepartmentID`, `Name`, `MailboxNumber`, `PhoneNumber`) VALUES
+(1, 'Sales and Marketing', 101, '555-1010'),
+(2, 'Compliance and Legal', 102, '555-2020');
+
+```
