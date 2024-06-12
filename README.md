@@ -82,9 +82,40 @@ After creating the database schema in MySQL, the schema was reverse-engineered t
 
 ![LiBOYD ERD Reverse Engineered](./ERD/LiByod_ERD_Reverse_engg.png)
 
-### Step 5: Inserting Mock Data
-Mock data was inserted into the tables to demonstrate the system's functionality. This data serves as sample records to test and validate the database operations.
+### Step 5: Writing SQL Queries for IT Management
+The IT management team is interested in important analytics to help them understand and manage the BYOD implementation effectively. Below listed questions were posed, and SQL queries were written to answer these questions.
 
-Path:
+- Provide a breakdown of the number of BYOD devices by type, make, model, and operating system.
+- What is the total cost of all BYODs in use and a cost breakdown of types and models?
+- What us the average cost of each type of BOYD device?
+- What are the average times between registration and approval, approval to activation and the average time from registration to device?
+- What type of device and operating system took the longest in days to be activated?
+- What are the minimum and maximum times for service delivery to activation?
+
+Path: [Database Insertion Script](./SQL_Scripts/LiBoyd_answer_script.sql)
+
+#### 1. Breakdown of BYOD devices by type, make model, and operating system.
+
+This helps IT management understand the diversity and distribution of devices within the company.
+
+```sql
+SELECT 
+    DT.TypeName AS DeviceType, 
+    D.Brand, 
+    D.Model, 
+    OS.OperatingSystem, 
+    COUNT(*) AS DeviceCount
+FROM 
+    DEVICE D
+JOIN 
+    DEVICE_TYPE DT ON D.DeviceTypeID = DT.DeviceTypeID
+JOIN 
+    OPERATING_SYSTEM OS ON D.OSID = OS.OSID
+GROUP BY 
+    DT.TypeName, D.Brand, D.Model, OS.OperatingSystem;
+
+```
+
+
 
 
