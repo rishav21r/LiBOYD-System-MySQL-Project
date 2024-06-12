@@ -59,7 +59,7 @@ CREATE TABLE `DEPARTMENT` (
 
 ### Step 3: Inserting Mock Data
 
-To demonstrate the functionality of the system, mock data was inserted into the tables. This data serves as sample records to test and validate the database operations.
+Mock data was inserted into the tables to demonstrate the system's functionality. This data serves as sample records to test and validate the database operations.
 
 Path: [Database Insertion Script](./SQL_Scripts/LiBoyd_insert_script.sql)
 
@@ -74,3 +74,8 @@ INSERT INTO `DEPARTMENT` (`DepartmentID`, `Name`, `MailboxNumber`, `PhoneNumber`
 (2, 'Compliance and Legal', 102, '555-2020');
 
 ```
+
+### Step 4: Verifying the Database Schema
+After creating the database schema in MySQL, the schema was reverse-engineered to generate an Entity-Relationship Model (ERM). This step verified that the ERD and ERM models match, ensuring the correct database creation.
+
+![LiBOYD ERD Reverse Engineered](./ERD/LiByod_ERD_Reverse_engg.png)
