@@ -2,12 +2,14 @@
 
 ## Background
 
-Life Insurance Co. decided to introduce a "bring your own device" (BYOD) model as part of their post-COVID "Work from Home" policy. Employees can use personal devices such as laptops, tablets, and smartphones to connect to the company network. The IT department aims to ensure cybersecurity compliance for all devices. The following are the business rules and requirements for the LiBOYD system.
+Life Insurance Co. decided to introduce a "bring your device" (BYOD) model as part of their post-COVID "Work from Home" policy. Employees can use personal devices such as laptops, tablets, and smartphones to connect to the company network. The IT department aims to ensure cybersecurity compliance for all devices. The following are the business rules and requirements for the LiBOYD system.
 
 - **Departments:** Employees work for specific departments, each having a unique code, name, mailbox number, and phone number.
 - **Projects:** New projects are created to address business issues. Each project has a name, description, start and end dates.
 - **Devices:** Devices can be desktops or mobile devices. Each device must be registered and approved before connecting to the network.
 - **Employee Access:** Employees must get permission to access special services, which are tracked by the system.
+
+The business rules & full requirements can be seen at [LiBOYD System Requirements](./LiBOYD_system_requirements.md)
 
 ### Business Rules
 
@@ -79,3 +81,10 @@ INSERT INTO `DEPARTMENT` (`DepartmentID`, `Name`, `MailboxNumber`, `PhoneNumber`
 After creating the database schema in MySQL, the schema was reverse-engineered to generate an Entity-Relationship Model (ERM). This step verified that the ERD and ERM models match, ensuring the correct database creation.
 
 ![LiBOYD ERD Reverse Engineered](./ERD/LiByod_ERD_Reverse_engg.png)
+
+### Step 5: Inserting Mock Data
+Mock data was inserted into the tables to demonstrate the system's functionality. This data serves as sample records to test and validate the database operations.
+
+Path:
+
+
