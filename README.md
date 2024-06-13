@@ -243,4 +243,10 @@ JOIN
 | 10                         | 10                         |
 
 
+### Data Definitions and Normalization
+Path: [Data Definitions and Normalization](./Data_Definitions_and_Normalization.md)
+
+This document provides detailed data definitions for all entities and explains how the database design adheres to the principles of normalization.
+
+
 
