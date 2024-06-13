@@ -59,7 +59,7 @@ CREATE TABLE `DEPARTMENT` (
 );
 ```
 
-### Step 3: Inserting Mock Data
+### Step 3: Inserting Data
 
 Mock data was inserted into the tables to demonstrate the system's functionality. This data serves as sample records to test and validate the database operations.
 
@@ -76,6 +76,8 @@ INSERT INTO `DEPARTMENT` (`DepartmentID`, `Name`, `MailboxNumber`, `PhoneNumber`
 (2, 'Compliance and Legal', 102, '555-2020');
 
 ```
+
+The dataset can be seen here: [Datasets and Tables](./SQL_scripts/datasets_and_tables.md)
 
 ### Step 4: Verifying the Database Schema
 After creating the database schema in MySQL, the schema was reverse-engineered to generate an Entity-Relationship Model (ERM). This step verified that the ERD and ERM models match, ensuring the correct database creation.
