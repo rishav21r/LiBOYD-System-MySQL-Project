@@ -248,5 +248,8 @@ Path: [Data Definitions and Normalization](./Data_Definitions_and_Normalization.
 
 This document provides detailed data definitions for all entities and explains how the database design adheres to the principles of normalization.
 
+### Conclusion
+This project aims to design and implement a comprehensive system for managing BYOD devices within Life Insurance Co. By following the structured approach of defining the schema, creating the database, and inserting mock data, the project demonstrates how to manage and analyze BYOD devices effectively. The SQL queries provide valuable insights and analytics for IT management, ensuring that all devices comply with cybersecurity policies and are efficiently managed.
 
+For any further information or questions, please refer to the detailed documentation and scripts included in this repository.
 
