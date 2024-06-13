@@ -116,6 +116,23 @@ GROUP BY
 
 ```
 
+#### 2. Total cost of all BYODs and cost breakdown by types and models.
+
+This provides insight into the financial investment in BYODs and helps in budgeting and cost management.
+
+```sql
+SELECT 
+    DT.TypeName AS DeviceType, 
+    D.Brand, 
+    D.Model, 
+    SUM(D.Value) AS TotalCost
+FROM 
+    DEVICE D
+JOIN 
+    DEVICE_TYPE DT ON D.DeviceTypeID = DT.DeviceTypeID
+GROUP BY 
+    DT.TypeName, D.Brand, D.Model;
+```
 
 
 
