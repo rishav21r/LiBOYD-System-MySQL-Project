@@ -144,6 +144,103 @@ JOIN
 GROUP BY 
     DT.TypeName, D.Brand, D.Model;
 ```
+| TotalCostOfAllBYODs |
+|---------------------|
+| 7380.00             |
+
+#### 3. The average cost of each type of BYOD device.
+
+Understanding the average cost helps in evaluating the cost-effectiveness of different types of devices.
+```sql
+SELECT 
+    DT.TypeName AS DeviceType, 
+    AVG(D.Value) AS AverageCost
+FROM 
+    DEVICE D
+JOIN 
+    DEVICE_TYPE DT ON D.DeviceTypeID = DT.DeviceTypeID
+GROUP BY 
+    DT.TypeName;
+
+```
+
+| TypeName   | AverageCost |
+|------------|-------------|
+| Smartphone | 800.000000  |
+| Tablet     | 700.000000  |
+| Laptop     | 650.000000  |
+| Desktop    | 1500.000000 |
+| Server     | 1200.000000 |
+
+#### 4. Average times between registration and approval, approval to activation, and registration to activation.
+
+This helps in assessing the efficiency of the device approval and activation processes.
+
+```sql
+SELECT 
+    AVG(DATEDIFF(A.ApprovalDate, D.RegistrationDate)) AS AvgRegistrationToApproval,
+    AVG(DATEDIFF(AC.ActivationDate, A.ApprovalDate)) AS AvgApprovalToActivation,
+    AVG(DATEDIFF(AC.ActivationDate, D.RegistrationDate)) AS AvgRegistrationToActivation
+FROM 
+    DEVICE D
+JOIN 
+    DEVICE_APPROVAL A ON D.DeviceID = A.DeviceID
+JOIN 
+    DEVICE_ACTIVATION AC ON D.DeviceID = AC.DeviceID;
+
+```
+
+| AvgTimeBetweenRegistrationAndApproval | AvgTimeBetweenApprovalAndActivation | AvgTimeFromRegistrationToActivation |
+|---------------------------------------|-------------------------------------|-------------------------------------|
+| 10.0000                               | 5.0000                              | 15.0000                             |
+
+#### 5. The device and operating system that took the longest to be activated.
+
+Identifying delays in the activation process can help in optimizing procedures and addressing bottlenecks.
+
+```sql
+SELECT 
+    D.DeviceID, 
+    OS.OperatingSystem, 
+    MAX(DATEDIFF(AC.ActivationDate, D.RegistrationDate)) AS MaxActivationTime
+FROM 
+    DEVICE D
+JOIN 
+    OPERATING_SYSTEM OS ON D.OSID = OS.OSID
+JOIN 
+    DEVICE_ACTIVATION AC ON D.DeviceID = AC.DeviceID
+GROUP BY 
+    D.DeviceID, OS.OperatingSystem
+ORDER BY 
+    MaxActivationTime DESC
+LIMIT 1;
+
+```
+
+
+| TypeName   | OperatingSystem | MaxDaysToActivation |
+|------------|-----------------|---------------------|
+| Smartphone | iOS             | 15                  |
+
+
+#### 6. Minimum and maximum times for service delivery to activation.
+
+Understanding the range of activation times can help set realistic expectations and improve service delivery.
+
+```sql
+SELECT 
+    MIN(DATEDIFF(AC.ActivationDate, D.RegistrationDate)) AS MinServiceDeliveryTime,
+    MAX(DATEDIFF(AC.ActivationDate, D.RegistrationDate)) AS MaxServiceDeliveryTime
+FROM 
+    DEVICE D
+JOIN 
+    DEVICE_ACTIVATION AC ON D.DeviceID = AC.DeviceID;
+
+```
+
+| MinTimeServiceToActivation | MaxTimeServiceToActivation |
+|----------------------------|----------------------------|
+| 10                         | 10                         |
 
 
 
