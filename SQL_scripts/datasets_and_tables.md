@@ -1,7 +1,7 @@
 ## Datasets and Tables
 
 
-### Department Table
+### Department Table:
 | DepartmentID | Name                   | MailboxNumber | PhoneNumber |
 |--------------|------------------------|---------------|-------------|
 | 1            | Sales and Marketing    | 101           | 555-0101    |
@@ -18,7 +18,7 @@
 | 12           | IT                     | 112           | 555-0112    |
 
 
-### Employee Table
+### Employee Table:
 | EmployeeID | FirstName | MiddleInitial | LastName | Title | CorporateEmail       | CorporatePhone | PersonalPhone | DepartmentID |
 |------------|-----------|---------------|----------|-------|----------------------|----------------|---------------|--------------|
 | 1          | John      | D             | Doe      | Mr.   | john.doe@email.com   | 555-1001       | 444-1001      | 1            |
@@ -31,4 +31,84 @@
 | 8          | Liu       | H             | Wen      | Ms.   | liu.wen@email.com    | 555-2008       | 444-2008      | 5            |
 
 
-### Employee Table
+### Device Table:
+| DeviceID | Brand  | Model        | Value | RegistrationDate | DisposalDate | EmployeeID |
+|----------|--------|--------------|-------|------------------|--------------|------------|
+| 1        | Apple  | iPhone 12    | 800.00| 2023-01-10       | NULL         | 1          |
+| 2        | Samsung| Galaxy S21   | 700.00| 2023-01-11       | NULL         | 2          |
+| 3        | Google | Pixel 5      | 650.00| 2023-01-12       | NULL         | 3          |
+| 4        | Apple  | MacBook Pro  | 1500.00| 2023-01-13      | NULL         | 4          |
+| 5        | Dell   | XPS 13       | 1200.00| 2023-01-14      | NULL         | 5          |
+| 6        | HP     | EliteDesk 800| 900.00| 2023-01-15       | NULL         | 6          |
+| 7        | Lenovo | ThinkCentre M720| 850.00| 2023-01-16    | NULL         | 7          |
+| 8        | Asus   | VivoPC       | 780.00| 2023-01-17       | NULL         | 8          |
+
+
+### Device Table:
+| DeviceID | Brand  | Model        | Value | RegistrationDate | DisposalDate | EmployeeID |
+|----------|--------|--------------|-------|------------------|--------------|------------|
+| 1        | Apple  | iPhone 12    | 800.00| 2023-01-10       | NULL         | 1          |
+| 2        | Samsung| Galaxy S21   | 700.00| 2023-01-11       | NULL         | 2          |
+| 3        | Google | Pixel 5      | 650.00| 2023-01-12       | NULL         | 3          |
+| 4        | Apple  | MacBook Pro  | 1500.00| 2023-01-13      | NULL         | 4          |
+| 5        | Dell   | XPS 13       | 1200.00| 2023-01-14      | NULL         | 5          |
+| 6        | HP     | EliteDesk 800| 900.00| 2023-01-15       | NULL         | 6          |
+| 7        | Lenovo | ThinkCentre M720| 850.00| 2023-01-16    | NULL         | 7          |
+| 8        | Asus   | VivoPC       | 780.00| 2023-01-17       | NULL         | 8          |
+
+### Location Table:
+| LocationID | BuildingName  | OfficeNumber |
+|------------|---------------|--------------|
+| 1          | Headquarters  | 101A         |
+| 2          | Headquarters  | 102B         |
+| 3          | Annex Building| 201A         |
+| 4          | Annex Building| 202B         |
+| 5          | East Wing     | 301C         |
+
+### Desktop Table:
+| DeviceID | StaticIP      | LocationID |
+|----------|---------------|------------|
+| 4        | 192.168.1.101 | 1          |
+| 5        | 192.168.1.102 | 2          |
+| 6        | 192.168.1.103 | 3          |
+| 7        | 192.168.1.104 | 4          |
+| 8        | 192.168.1.105 | 5          |
+
+
+### Mobile Device Table:
+| DeviceID | ScreenLockEnabled | IsEncrypted |
+|----------|-------------------|-------------|
+| 1        | 1                 | 1           |
+| 2        | 1                 | 1           |
+| 3        | 1                 | 0           |
+| 4        | 0                 | 1           |
+| 5        | 1                 | 1           |
+
+
+### Asset Register Table:
+| AssetID | DeviceID | AcquisitionDate | DisposalDate |
+|---------|----------|-----------------|--------------|
+| 1       | 1        | 2023-01-01      | NULL         |
+| 2       | 2        | 2023-01-02      | NULL         |
+| 3       | 3        | 2023-01-03      | NULL         |
+| 4       | 4        | 2023-01-04      | NULL         |
+| 5       | 5        | 2023-01-05      | NULL         |
+
+
+### Device Type Table:
+| DeviceTypeID | TypeName  |
+|--------------|-----------|
+| 1            | Smartphone|
+| 2            | Tablet    |
+| 3            | Laptop    |
+| 4            | Desktop   |
+| 5            | Server    |
+
+
+
+
+
+
+
+
+
