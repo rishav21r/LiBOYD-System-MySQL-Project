@@ -118,6 +118,15 @@ GROUP BY
 
 ```
 
+| TypeName   | Brand   | Model       | TotalValue |
+|------------|---------|-------------|------------|
+| Smartphone | Apple   | iPhone 12   | 800.00     |
+| Tablet     | Samsung | Galaxy S21  | 700.00     |
+| Laptop     | Google  | Pixel 5     | 650.00     |
+| Desktop    | Apple   | MacBook Pro | 1500.00    |
+| Server     | Dell    | XPS 13      | 1200.00    |
+
+
 #### 2. Total cost of all BYODs and cost breakdown by types and models.
 
 This provides insight into the financial investment in BYODs and helps in budgeting and cost management.
