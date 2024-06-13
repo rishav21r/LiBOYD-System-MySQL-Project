@@ -1,4 +1,4 @@
-## Datasets and Tables
+# Datasets and Tables
 
 
 ### Department Table:
@@ -105,7 +105,55 @@
 | 5            | Server    |
 
 
+### Service Table:
+| ServiceID | Name              | Description                         |
+|-----------|-------------------|-------------------------------------|
+| 1         | HR Management     | Human resources related services    |
+| 2         | Payroll           | Monthly payroll processing          |
+| 3         | Training          | Personal development and training   |
+| 4         | IT Support        | IT-related support services         |
+| 5         | Legal Consulting  | Legal advice and compliance consulting|
 
+
+### Service Access Table:
+| ServiceID | EmployeeID | AccessApprovalDate |
+|-----------|------------|--------------------|
+| 1         | 1          | 2023-01-15         |
+| 2         | 2          | 2023-01-16         |
+| 3         | 3          | 2023-01-17         |
+| 4         | 4          | 2023-01-18         |
+| 5         | 5          | 2023-01-19         |
+
+
+
+### Role Table:
+| RoleID | Description       |
+|--------|-------------------|
+| 1      | Project Manager   |
+| 2      | Team Lead         |
+| 3      | Software Developer|
+| 4      | Quality Assurance |
+| 5      | Business Analyst  |
+
+
+
+### Project Table:
+| ProjectID | Name               | Description                           | StartDate  | EndDate    |
+|-----------|--------------------|---------------------------------------|------------|------------|
+| 1         | NextGen Product    | Developing next generation of products| 2023-02-01 | 2023-08-01 |
+| 2         | Compliance Update  | Updating compliance protocols         | 2023-03-01 | 2023-04-15 |
+| 3         | Website Revamp     | Redesigning the company website       | 2023-04-01 | 2023-10-01 |
+| 4         | Security Enhancement| Enhancing IT security                | 2023-05-01 | 2023-07-01 |
+| 5         | Market Expansion   | Expanding into new markets            | 2023-06-01 | 2024-01-01 |
+
+
+
+### Project Membership Table:
+| ProjectID | EmployeeID | RoleID |
+|-----------|------------|--------|
+| 1         | 1          | 1      |
+| 1         | 2          | 2      |
+| 1
 
 
 
