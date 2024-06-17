@@ -85,7 +85,7 @@ After creating the database schema in MySQL, the schema was reverse-engineered t
 ![LiBOYD ERD Reverse Engineered](./ERD/LiByod_ERD_Reverse_engg.png)
 
 ### Step 5: Writing SQL Queries for IT Management
-The IT management team is interested in important analytics to help them understand and manage the BYOD implementation effectively. Below listed questions were posed, and SQL queries were written to answer these questions.
+The IT management team is interested in important analytics to help them understand and manage the BYOD implementation effectively. Listed questions below were posed, and SQL queries were written to answer these questions.
 
 - Provide a breakdown of the number of BYOD devices by type, make, model, and operating system.
 - What is the total cost of all BYODs in use and a cost breakdown of types and models?
