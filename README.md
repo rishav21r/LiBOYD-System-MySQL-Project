@@ -89,7 +89,7 @@ The IT management team is interested in important analytics to help them underst
 
 - Provide a breakdown of the number of BYOD devices by type, make, model, and operating system.
 - What is the total cost of all BYODs in use and a cost breakdown of types and models?
-- What us the average cost of each type of BOYD device?
+- What is the average cost of each type of BOYD device?
 - What are the average times between registration and approval, approval to activation and the average time from registration to device?
 - What type of device and operating system took the longest in days to be activated?
 - What are the minimum and maximum times for service delivery to activation?
